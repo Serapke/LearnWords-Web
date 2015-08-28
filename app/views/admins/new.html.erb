@@ -1,0 +1,13 @@
+<% if current_admin %> 
+	<div class="admin_panel">
+		<div class="container">
+			<div class="form">
+				<h1>Užsiregistruoti</h1>
+				<%= render 'form' %>
+				<%= link_to 'Grižti', admin_path, class: "admin_button go_back" %>
+			</div>
+		</div>
+	</div>
+<% else %>
+	<% require_admin %>
+<% end %>

@@ -1,0 +1,34 @@
+<div class="contact-content row">
+	<div class="col-md-1 hidden-xs">
+	</div>
+	<div class="col-md-6 get_in_touch">
+		<h1>Susisiekite su mumis</h1>
+		<p>Esam draugiška ir lengvai prieinama komanda, tad jeigu turite klausimą, nesidrovėkite - klauskite.
+		Skambinkite ar parašykite el. laišką. Susisiekite su mumis Twitter
+		ar tiesiog išsiųskite žinute užpildę dešinėje esančią formą.</p>
+		<div class="contact_details">
+			<div class="container">
+			<div class="detail">
+				<img src="/assets/phone.png"/><p>+447783008354</p>
+			</div>
+			<div class="detail">
+				<img src="/assets/email.png"/><p>M.Serapinas@gmail.com</p>
+			</div>
+			<div class="detail">
+				<img src="/assets/twitter.png"/><p>@serapke</p>
+			</div>
+			<div class="detail">
+				<img src="/assets/facebook.png"/><p>Facebook.com/M.Serapinas</p>
+			</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-5 right">
+		<%= form_tag(site_contact_path, remote: true, class: 'response form-horizontal', authenticity_token: true) do %>
+			<h2 class="contact-title">Parašykite mums</h2>
+			<div>
+				<p>Ačiū! (Mes pasistenksime atsakyti Jums, kuo greičiau)</p>
+			</div>
+		<% end %>
+	</div>
+</div>

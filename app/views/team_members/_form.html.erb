@@ -1,0 +1,41 @@
+<%= form_for(@team_member) do |f| %>
+  <% if @team_member.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@team_member.errors.count, "error") %> prohibited this team_member from being saved:</h2>
+
+      <ul>
+      <% @team_member.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :job_title %>
+    <%= f.text_field :job_title %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.text_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :quote %>
+    <%= f.text_field :quote %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Išsaugoti", class: "submit" %>
+  </div>
+<% end %>

@@ -1,0 +1,11 @@
+<% if current_admin %> 
+	<div class="admin_panel">
+		<div class="container">
+			<h1>Atnaujinti komandos narį</h1>
+			<%= link_to 'Grįžti', @team_member, class: "admin_button go_back" %>
+			<%= render 'form' %>
+		</div>
+	</div>
+<% else %>
+	<% require_admin %>
+<% end %>

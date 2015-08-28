@@ -1,0 +1,15 @@
+<section class="team">
+	<div class="container">
+		<h1>Mūsų Komanda</h1>
+		<div class="members">
+			<% @team_members.each do |team_member| %>
+				<div class="team_member center">
+					<%= image_tag(team_member.image) %>
+					<h3 class="name"><%= team_member.name %></h3>
+					<h6 class="job_title"><%= team_member.job_title %></h6>
+					<p class="quote hidden-xs"><%= team_member.quote %></p>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</section>
