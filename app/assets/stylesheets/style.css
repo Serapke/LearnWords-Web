@@ -184,9 +184,9 @@ h6 {
 	background: #f8f8f8;
 	color: #2980b9;
 	text-decoration: none;
-	-webkit-box-shadow: 3px 3px 3px 0px rgba(221,13,NaN,1);
-	-moz-box-shadow: 2px 2px 2px 0px rgba(221,13,NaN,1);
-	box-shadow: 3px 3px 3px 0px rgba(221,13,NaN,1);
+	-webkit-box-shadow: 3px 3px 3px 0px rgba(221,13,0,1);
+	-moz-box-shadow: 2px 2px 2px 0px rgba(221,13,0,1);
+	box-shadow: 3px 3px 3px 0px rgba(221,13,0,1);
 }
 .present {
 	padding: 20px;
@@ -656,9 +656,9 @@ textarea {
 	background: #f8f8f8;
 	color: #2980b9;
 	text-decoration: none;
-	-webkit-box-shadow: 3px 3px 3px 0px rgba(221,13,NaN,1);
-	-moz-box-shadow: 2px 2px 2px 0px rgba(221,13,NaN,1);
-	box-shadow: 3px 3px 3px 0px rgba(221,13,NaN,1);
+	-webkit-box-shadow: 3px 3px 3px 0px rgba(221,13,0,1);
+	-moz-box-shadow: 2px 2px 2px 0px rgba(221,13,0,1);
+	box-shadow: 3px 3px 3px 0px rgba(221,13,0,1);
 }
 
 	@media (max-width: 767px) {
