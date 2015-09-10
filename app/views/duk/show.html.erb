@@ -1,0 +1,21 @@
+<% if current_admin %>
+	<div class="admin_panel">
+		<div class="container">
+      <div class="show_duk" %>
+  			<h4 class="query">
+  			  <%= @duk.query%>
+  			</h3>
+  			<p class="answer">
+  			  <%= @duk.answer %>
+  			</p>
+      </div>
+			<div class="buttons">
+        <%= link_to 'Rodyti visus DUK', duk_index_path, class: "admin_button" %>
+				<%= link_to 'Atnaujinti DUK', edit_duk_path(@duk), class: "admin_button" %>
+				<%= link_to 'Grįžti', admin_path, class: "admin_button" %>
+			</div>
+		</div>
+	</div>
+<% else %>
+	<% require_admin %>
+<% end %>

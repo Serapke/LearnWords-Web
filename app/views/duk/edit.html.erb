@@ -1,0 +1,27 @@
+<% if current_admin %>
+	<div class="admin_panel">
+		<div class="container">
+			<h1>Atnaujinti komandos narį</h1>
+			<%= link_to 'Grižti', admin_path, class: "admin_button go_back" %>
+			<%= form_for(@duk) do |f| %>
+			  <% if @duk.errors.any? %>
+			    <div id="error_explanation">
+			      <h2><%= pluralize(@duk.errors.count, "error") %> prohibited this admin from being saved:</h2>
+
+			      <ul>
+			      <% @duk.errors.full_messages.each do |message| %>
+			        <li><%= message %></li>
+			      <% end %>
+			      </ul>
+			    </div>
+			  <% end %>
+
+       <%=  render 'form' %>
+
+			
+			<% end %>
+		</div>
+	</div>
+<% else %>
+	<% require_admin %>
+<% end %>

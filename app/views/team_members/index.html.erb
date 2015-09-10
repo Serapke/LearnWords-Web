@@ -10,6 +10,11 @@
 					<p class="quote hidden-xs"><%= team_member.quote %></p>
 				</div>
 			<% end %>
+			<div class="no-right-border team_member center add_new">
+				<%= link_to image_tag("add_team_member.png"), new_team_member_path, class: "add_member_link" %>
+				<h3 class="name">Prideti nauja nari</h3>
+				<h6 class="job_title"></h6>
+			</div>
 		</div>
 	</div>
 </section>

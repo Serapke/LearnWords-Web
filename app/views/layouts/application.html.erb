@@ -5,12 +5,13 @@
   <title>LearnWords</title>
   <%= stylesheet_link_tag    'default', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application' %>
 
 
   <%= stylesheet_link_tag "bootstrap" %>
   <%= stylesheet_link_tag "http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" %>
   <%= stylesheet_link_tag "style" %>
-  <%= csrf_meta_tags %>
+
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,7 +21,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="/assets/bootstrap.min.js"></script>
 	<script src="/assets/custom.js"></script>
-
+<%= csrf_meta_tag %>
 </head>
 <body>
 
@@ -70,13 +71,14 @@
 					<h3>Pagalba</h3>
 					<ul>
 						<li><a href="duk.html">D.U.K.</a></li>
-						<li><a href="contact.html">Susisiekite su mumis</a></li>
 						<li><a href="blog.html">Blogas</a></li>
 					</ul>
 				</div>
 				<div class="col-md-4">
 					<h3>Prisidėkite prie mūsų komandos:</h3>
 					<p>M.Serapinas@gmail.com</p>
+
+          <%= link_to "Admin", admin_login_path, { class: "admin_login"} %>
 				</div>
 			</div>
 			<div class="row rights">

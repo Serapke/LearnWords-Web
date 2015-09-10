@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   resources :team_members
+  resources :duk
 
 
   get 'site/home', :path => 'index'
@@ -9,11 +10,15 @@ Rails.application.routes.draw do
   get 'site/download_app' => 'site#download_app', as: :download_app
   get 'site/contact', :path => 'contact'
   post '/contact' => 'site#contact_send_email'
-  get 'admin' => 'sessions#new'	#sign in
+
+  get 'admin' => 'sessions#new', as: :admin_login	#sign in,
   post 'admin' => 'sessions#create'
-  delete 'admin/logout' => 'sessions#destroy' #log out
+  delete 'logout' => 'sessions#destroy' #log out
+
   get 'admin/signup' => 'admins#new', as: :admin_signup #sign up
   resources :admins, only: [:new, :create, :edit]
+  get 'duks' => 'duk#new'
+  post 'duks' => 'duk#create'
 
   root to: 'site#home'
   # The priority is based upon order of creation: first created -> highest priority.
