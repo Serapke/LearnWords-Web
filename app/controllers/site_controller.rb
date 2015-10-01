@@ -8,8 +8,12 @@ class SiteController < ApplicationController
   def download
   end
 
-  def download_app
+  def download_app(os)
+    if (os = "Windows")
 	   send_file Rails.root.join('app/assets/downloads', 'Setup.exe'), type: "application/exe"
+   elseif (os = "Mac")
+     send_file Rails.root.join('app/assets/downloads', 'WordsApp.dmg'), type: "application/dmg"
+   end
   end
 
   def contact

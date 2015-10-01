@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   get 'site/home', :path => 'index'
   get 'site/benefits', :path => 'benefits'
   get 'site/download', :path => 'download'
-  get 'site/download_app' => 'site#download_app', as: :download_app
+  get 'site/download_app_win' => 'site#download_app', as: :download_app_win
+  get 'site/download_app_mac' => 'site#download_app', as: :download_app_mac
   get 'site/contact', :path => 'contact'
   post '/contact' => 'site#contact_send_email'
 
