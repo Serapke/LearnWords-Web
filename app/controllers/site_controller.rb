@@ -11,7 +11,8 @@ class SiteController < ApplicationController
   def download_app_win
 	   send_file Rails.root.join('app/assets/downloads', 'Setup.exe'), type: "application/exe"
   end
-  def download_app_os
+
+  def download_app_mac
     send_file Rails.root.join('app/assets/downloads', 'WordsApp.dmg'), type: "application/dmg"
   end
 
