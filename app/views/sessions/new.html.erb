@@ -3,18 +3,18 @@
 		<div class="container">
 			<h1>Admin Panel</h1>
 			<div class="team_members_list col-md-4">
-				<h3>Komandos narių sąrašas</h3>
+				<h3>Team Members List</h3>
 				<ul>
 					<%= TeamMember.find_each do |t| %>
 						<li><%= link_to t.name , team_member_path(t), class: "team_member" %></li>
 					<% end %>
 				</ul>
-				<%= link_to 'Pridėti naują narį', new_team_member_path, method: "get", class: "admin_button" %>
+				<%= link_to 'Add New Member', new_team_member_path, method: "get", class: "admin_button" %>
 			</div>
 			<div class="col-md-4 website-settings">
 				<h3>Svetainės nustatymai</h3>
-				<%= link_to "Pridėti naują adminą", admin_signup_path, class: "admin_button" %>
-				<%= link_to "Pridėti naują DUK", new_duk_path, class: "admin_button" %>
+				<%= link_to "Add New Admin", admin_signup_path, class: "admin_button" %>
+				<%= link_to "Add New FAQ", new_duk_path, class: "admin_button" %>
 			</div>
 			<div class="personal col-md-4">
 				<h3>Paskyra</h3>
@@ -24,8 +24,8 @@
 					<img src="/assets/admin_logo.png" />
 				<% end %>
 				<ul>
-					<li><%= link_to "Redaguoti duomenis", edit_admin_path(session[:admin_id]), method: "get", class: "admin_button" %></li>
-					<li><%= link_to "Atsijungti", logout_path, method: "delete", class: "admin_button"%></li>
+					<li><%= link_to "Edit profile", edit_admin_path(session[:admin_id]), method: "get", class: "admin_button" %></li>
+					<li><%= link_to "Log out", logout_path, method: "delete", class: "admin_button"%></li>
 				</ul>
 			</div>
 		</div>
@@ -35,7 +35,7 @@
 		<%= form_for(:session, url: admin_login_path) do |f| %>
 			<%= f.text_field :username, placeholder: "Username" %>
 			<%= f.password_field :password, placeholder: "Password" %>
-			<%= f.submit "Prisijungti", method: "post" %>
+			<%= f.submit "Login", method: "post" %>
 		<% end %>
 	</div>
 <% end %>

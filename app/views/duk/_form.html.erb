@@ -1,11 +1,9 @@
 <%= form_for(@duk) do |f| %>
   <% if @duk.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@duk.errors.count, "error") %> prohibited this duk from being saved:</h2>
-
       <ul>
       <% @duk.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <li class="error"><%= message %></li>
       <% end %>
       </ul>
     </div>
@@ -17,9 +15,9 @@
   </div>
   <div class="field">
     <%= f.label :answer %>
-    <%= f.text_area(:answer, size: "5x5") %>
+    <%= f.text_area(:answer, size: "5x5", maxlength: 600) %>
   </div>
   <div class="actions">
-    <%= f.submit "Išsaugoti", class: "submit" %>
+    <%= f.submit "Submit", class: "submit" %>
   </div>
 <% end %>

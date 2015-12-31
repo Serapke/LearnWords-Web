@@ -1,41 +1,9 @@
 <% if current_admin %>
 	<div class="admin_panel">
 		<div class="container">
-			<h1>Atnaujinti komandos narį</h1>
-			<%= link_to 'Grižti', admin_path, class: "admin_button go_back" %>
-			<%= form_for(@admin) do |f| %>
-			  <% if @admin.errors.any? %>
-			    <div id="error_explanation">
-			      <h2><%= pluralize(@admin.errors.count, "error") %> prohibited this admin from being saved:</h2>
-
-			      <ul>
-			      <% @admin.errors.full_messages.each do |message| %>
-			        <li><%= message %></li>
-			      <% end %>
-			      </ul>
-			    </div>
-			  <% end %>
-
-			  <div class="field">
-			    <%= f.label :username %>
-			    <%= f.text_field :username %>
-			  </div>
-			  <div class="field">
-			    <%= f.label :email %>
-			    <%= f.email_field :email %>
-			  </div>
-			  <div class="field">
-			    <%= f.label :image %>
-			    <%= f.text_field :image %>
-			  </div>
-			  <div class="field">
-			    <%= f.label :password %>
-			    <%= f.password_field :password %>
-			  </div>
-			  <div class="actions">
-			    <%= f.submit "Atnaujinti", class: "submit", method: "put" %>
-			  </div>
-			<% end %>
+			<h1>Update Admin</h1>
+			<%= link_to 'Back', admin_login_path, class: "admin_button go_back" %>
+		  <%= render 'form' %>
 		</div>
 	</div>
 <% else %>

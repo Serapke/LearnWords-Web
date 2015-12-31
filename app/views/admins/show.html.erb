@@ -1,0 +1,20 @@
+<% if current_admin %>
+	<div class="admin_panel">
+		<div class="container">
+			<p id="notice"><%= notice %></p>
+			<%= image_tag(@admin.image) %>
+			<h3>
+			  <%= @admin.username %>
+			</h3>
+			<p>
+			  <%= @admin.email %>
+			</p>
+			<div class="buttons">
+				<%= link_to 'Update Admin', edit_admin_path(@admin), class: "admin_button" %>
+				<%= link_to 'Back', admin_login_path, class: "admin_button" %>
+			</div>
+		</div>
+	</div>
+<% else %>
+	<% require_admin %>
+<% end %>

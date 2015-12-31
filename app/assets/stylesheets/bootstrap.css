@@ -4422,10 +4422,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 	margin-left: 40px;
 }
 .navbar-links > li > a > img {
-	margin-left: 24px;
 }
 .navbar-links > li > a {
 	transition: background 1s;
+  text-align: center;
 }
 .navbar-links > li > a:hover,
 .navbar-links > li > a:focus {

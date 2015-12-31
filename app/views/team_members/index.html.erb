@@ -1,6 +1,6 @@
 <section class="team">
 	<div class="container">
-		<h1>Mūsų Komanda</h1>
+		<h1>Our Team</h1>
 		<div class="members">
 			<% @team_members.each do |team_member| %>
 				<div class="team_member center">
@@ -12,7 +12,7 @@
 			<% end %>
 			<div class="no-right-border team_member center add_new">
 				<%= link_to image_tag("add_team_member.png"), new_team_member_path, class: "add_member_link" %>
-				<h3 class="name">Prideti nauja nari</h3>
+				<h3 class="name">Add New Member</h3>
 				<h6 class="job_title"></h6>
 			</div>
 		</div>

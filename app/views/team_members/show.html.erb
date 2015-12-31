@@ -1,4 +1,4 @@
-<% if current_admin %> 	
+<% if current_admin %>
 	<div class="admin_panel">
 		<div class="container">
 			<p id="notice"><%= notice %></p>
@@ -19,9 +19,9 @@
 			  <%= @team_member.quote %>
 			</p>
 			<div class="buttons">
-				<%= link_to 'Pašalinti narį', team_members_path, action: "delete", class: "admin_button" %> 
-				<%= link_to 'Atnaujinti nario informaciją', edit_team_member_path(@team_member), class: "admin_button" %>
-				<%= link_to 'Grįžti', admin_path, class: "admin_button" %>
+				<%= link_to 'Delete Member', team_members_path, action: "delete", class: "admin_button" %>
+				<%= link_to 'Update Member', edit_team_member_path(@team_member), class: "admin_button" %>
+				<%= link_to 'Back', admin_login_path, class: "admin_button" %>
 			</div>
 		</div>
 	</div>

@@ -1,28 +1,35 @@
 class AdminsController < ApplicationController
+  before_action :set_admin, only: [:show, :edit, :update, :destroy]
+
   def new
 		@admin = Admin.new
 	end
+
+  def edit
+	end
+
+  def show
+  end
 
 	def create
 		@admin = Admin.new(admin_params)
 		if @admin.save
 			session[:admin_id] = @admin.id
-			redirect_to '/admin'
+			redirect_to '/adminksksk'
 		else
 			redirect_to '/admin/signup'
 		end
 	end
 
-	def edit
-		@admin = Admin.find_by_id(params[:id])
-	end
-
   def update
-    @admin = Admin.find(params[:id])
-    if @admin.update(admin_params)
-      redirect_to '/admin'
-    else
-      render 'edit'
+    respond_to do |format|
+      if @admin.update(admin_params)
+        format.html { redirect_to @admin, notice: 'Admin was successfully updated.' }
+        format.json { render :show, status: :ok, location: @admin }
+      else
+        format.html { render :edit }
+        format.json { render json: @admin.errors, status: :unprocessable_entity }
+      end
     end
   end
 
@@ -30,4 +37,7 @@ class AdminsController < ApplicationController
 	def admin_params
 		params.require(:admin).permit(:username, :email, :image, :password)
 	end
+  def set_admin
+    @admin = Admin.find(params[:id])
+  end
 end

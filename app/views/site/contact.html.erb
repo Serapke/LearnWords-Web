@@ -2,10 +2,13 @@
 	<div class="col-md-1 hidden-xs">
 	</div>
 	<div class="col-md-6 get_in_touch">
-		<h1>Susisiekite su mumis</h1>
-		<p>Esam draugiška ir lengvai prieinama komanda, tad jeigu turite klausimą, nesidrovėkite - klauskite.
-		Skambinkite ar parašykite el. laišką. Susisiekite su mumis Twitter
-		ar tiesiog išsiųskite žinute užpildę dešinėje esančią formą.</p>
+		<h1>Contact Us</h1>
+		<p>
+			We are friendly and easily approachable team.
+			If you have any questions, don't be shy - ask, we are happy to help.
+			Give us a call or email us. Contact us on Twitter or just use the form
+			below.
+		</p>
 		<div class="contact_details">
 			<div class="container">
 			<div class="detail">
@@ -25,33 +28,33 @@
 	</div>
 	<div class="col-md-5 right">
 		<%= form_tag(site_contact_path, remote: true, class: 'response form-horizontal', authenticity_token: true) do %>
-			<h2 class="contact-title">Parašykite mums</h2>
+			<h2 class="contact-title">Send Message</h2>
 			<div class="form-group">
-			  <label class="control-label col-sm-4" for="name">Vardas</label>
+			  <label class="control-label col-sm-4" for="name">Name</label>
 			  <div class="col-sm-8">
 				<%= text_field_tag 'name', nil, placeholder: 'Įveskite vardą', class: 'form-control', autocomplete: 'on' %>
 			  </div>
 			</div>
-			
+
 			<div class="form-group">
-			  <label class="control-label col-sm-4" for="email">El. paštas</label>
+			  <label class="control-label col-sm-4" for="email">Email</label>
 			  <div class="col-sm-8">
 				<%= text_field_tag 'email', nil, placeholder: 'Įveskite el.paštą', class: 'form-control', autocomplete: 'on' %>
 			  </div>
 			</div>
-			
+
 			<div class="form-group">
-			  <label class="control-label col-sm-4" for="comment">Komentarai</label>
+			  <label class="control-label col-sm-4" for="comment">Message</label>
 			  <div class="col-sm-8">
 				<%= text_area_tag 'comment', nil, placeholder: 'Jūsų komentaras', class: 'form-control', autocomplete: 'on', rows: '6' %>
 			  </div>
 			</div>
 			<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-			<div class="button-holder">	
-				<%= submit_tag 'Siųsti', class: 'submit' %>
+			<div class="button-holder">
+				<%= submit_tag 'Send', class: 'submit' %>
 			</div>
 			<div class="hidden">
-				<p>Ačiū! (Mes pasistenksime atsakyti Jums, kuo greičiau)</p>
+				<p>Thank you! We will contact you soon.</p>
 			</div>
 		<% end %>
 	</div>

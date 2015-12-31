@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   resources :team_members
   resources :duk
-
+  resources :admins
 
   get 'site/home', :path => 'index'
   get 'site/benefits', :path => 'benefits'
@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy' #log out
 
   get 'admin/signup' => 'admins#new', as: :admin_signup #sign up
-  resources :admins, only: [:new, :create, :edit]
+
   get 'duks' => 'duk#new'
   post 'duks' => 'duk#create'
 
