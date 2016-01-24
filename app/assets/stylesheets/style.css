@@ -139,16 +139,20 @@ li.error {
 	padding-top: 5px;
 }
 .navbar .logo {
-	width: 64px;
-	height: 64px;
+	width: 68px;
+	height: 68px;
 	background: url('/assets/temp-logo1.png') no-repeat;
 	display: block;
+	margin-bottom: 20px;
 	margin-top: 20px;
-	border-bottom: 3px solid #fff;
-	transition: ease all 1.5s;
+	border-left: 2px solid #fff;
+	border-right: 2px solid #fff;
+	border-top: 2px solid #fff;
+	border-bottom: 4px solid #fff;
+	transition: ease all 1s;
 }
-.navbar .logo:hover{
-	background: url('/assets/temp-logo.png') no-repeat;
+.navbar .logo:hover {
+	border-bottom: 10px solid #fff;
 }
 
 .jumbotron {
@@ -156,6 +160,11 @@ li.error {
 	background-size: cover;
 	height: 520px;
 	width: auto;
+	opacity: 0.9;
+	transition: ease all 1s;
+}
+.jumbotron:hover {
+	opacity: 1;
 }
 
 .jumbotron h1 {
@@ -205,45 +214,22 @@ li.error {
 	line-height: 26px;
 }
 
-	@media (max-width: 767px) {
+	@media (max-width: 797px) {
 		.navbar-header{
-			height: 75px;
+
 		}
 		.navbar .logo {
-			width: 32px;
-			height: 32px;
-			background: url('images/temp-logo32.png') no-repeat;
+
 		}
 		body {
 			padding-top: 70px;
 		}
 		.jumbotron {
-			height: 600px;
+			height: 620px;
 		}
 	}
-
-
-/*************** Features ***************/
-.features {
-	background-color: #f7f7f7;
-	padding: 60px 50px 50px 50px;
-	text-align: center;
-	width: 100%;
-}
-
-.features h3 {
-	color: #555555;
-	font-size: 18px;
-	margin-top: 15px;
-	margin-bottom: 20px;
-	font-family: 'Shift', sans-serif;
-	font-weight: bold;
-	text-align: center;
-}
-
 /*************** Footer ***************/
 .footer {
-	height: 200px;
 	width: 100%;
 	position: relative;
 	border-top: 1px solid #e5e5e5;
@@ -334,10 +320,10 @@ li.error {
 .benefits {
 	width: 100%;
 	position: relative;
-	background: url('/assets/try4.jpg') center right;
+	background: url('/assets/features_background.jpg') center right;
 	text-align: center;
 	display: flex;
-	padding-top: 70px;
+	padding-top: 90px;
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
@@ -345,9 +331,9 @@ li.error {
 	border: 1px solid #555;
 	text-align: center;
 	background: #fff;
-	opacity: 0.8;
+	opacity: 0.9;
 	padding: 0;
-	transition: 1s all ease-in-out;
+	transition: 1s all ease;
 }
 .box:hover {
 	opacity: 1;
@@ -386,6 +372,7 @@ li.error {
 }
 .feature {
 	padding: 50px 40px 50px 40px;
+	width: 100%;
 	border-bottom: 1px solid #e5e5e5;
 	color: #504759;
 	display: inline-block;
@@ -461,63 +448,73 @@ li.error {
 /******************************** DOWNLOAD **********************************/
 .download {
 	width: 100%;
-	height: 530px;
-	background: url('/assets/download_background.jpg') #000 left top;
-}
-.download h1 {
-	padding: 40px 0 40px 0;
 	color: #fff;
+	background: url('/assets/download_background.jpg') #000 left top;
+	padding: 50px;
+}
+.download .title {
+	padding: 10px 0 40px 0;
 	text-align: center;
 	font-size: 46px;
 	font-family: 'Shift', sans-serif;
 	font-weight: bold;
 }
-
 .download .left {
-	margin-left: 80px;
-	margin-top: -20px;
 	padding: 0;
 }
 .download .right {
 	background: #f7f7f7;
-	margin-left: 20px;
-	margin-right: 20px;
-	padding: 30px;
-	border: #ccc solid 1px;
-	opacity: 0.9;
+	padding: 20px 30px 20px 30px;
+	border: #bbb solid 1px;
+	opacity: 0.95;
 }
-.download .right ul  li{
-	list-style-type: none;
+.download .downloadDescription {
 	color: #525252;
-	letter-spacing: 1px;
 	font-size: 1.2em;
-	padding: 5px;
 	line-height: 1em;
+	letter-spacing: 1px;
 }
-.download .right a {
+.download .downloadDescription ul  li{
+	list-style-type: none;
+	padding: 5px;
+}
+.download .downloadButtons a {
 	color: #fff;
+	background: #2980b9;
 	font-weight: bold;
 	line-height: 30px;
 	text-decoration: none;
 	text-align: center;
 	transition: 1s all ease-in-out;
-	background: #2980b9;
 	display: block;
 	padding: 10px;
 	text-transform: uppercase;
 	border: 2px solid #555;
-	border-radius: 2px;
 	margin-top: 20px;
 	font-family: Tahoma, Verdana;
 	font-size: 0.9em;
 }
-.download .right a:hover {
+.download .downloadButtons a:hover {
 	background: #1866ac;
 	border-bottom: 2px solid #000;
 }
+.downloadedTimes {
+	padding: 30px 0 10px 0;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 18px;
+	letter-spacing: 2px;
+	font-weight: 300;
+	color: #404040;
+}
 	@media (min-width: 767px) {
 		.download .left > img {
-			max-width: 500px;
+
+		}
+	}
+	@media (max-width: 1000px) {
+		.download .left > img {
+			display: none;
 		}
 	}
 
@@ -550,7 +547,7 @@ li.error {
 .detail {
 	width: 100%;
 	clear: both;
-	padding: 10px 0;
+	padding: 30px 0;
 }
 .contact_details img{
 	float: left;
@@ -574,7 +571,7 @@ li.error {
 .response .contact-title {
 	padding: 0;
 	color: #555;
-	font-weight: bold;
+	font-weight: 300;
 	text-align: left;
 	margin-bottom: 25px;
 	border-bottom: 1px solid #909090;
@@ -621,6 +618,9 @@ label {
 }
 
 	@media (max-width: 767px) {
+		.contact-content {
+			margin-top: 20px;
+		}
 		.contact-content .col-md-5  {
 			width: 100%;
 		}
@@ -753,13 +753,15 @@ label {
 }
 
 	@media (max-width: 767px) {
-		.duk {
-			padding: 30px;
-			background: url('images/questionMark.jpg') repeat-y;
+		.duk_page {
+			padding: 50px 10px 0;
+			background: #e5e5e5;
 		}
-		.duk .col-md-4 {
-			min-height: 200px;
-			opacity: 0.9;
+		.duk .query {
+			font-size: 16px;
+		}
+		.duk .answer {
+			font-size: 14px;
 		}
 	}
 
@@ -788,9 +790,9 @@ label {
 	float: left;
 	width: auto;
 	max-width: 280px;
-	height: 380px;
+	height: 420px;
 	border-right: 5px dashed #f0f0f0;
-	opacity: 0.9;
+	opacity: 0.95;
 	transition: 1s ease all;
 }
 .team .team_member:hover  {
@@ -799,8 +801,8 @@ label {
 	opacity: 1;
 }
 .team_member img{
-	width: 180px;
-	height: 180px;
+	width: 160px;
+	height: 160px;
 	border-radius: 20px;
 }
 .add_member_link {
@@ -980,6 +982,9 @@ label {
 	width: 100%;
 }
 	@media (max-width: 767px) {
+		.admin_panel {
+			padding-top: 50px;
+		}
 		.admin_panel .col-md-4 {
 			border-bottom: 1px solid #fff;
 			padding: 20px 5px;
@@ -1002,7 +1007,8 @@ label {
 			margin-top: 10px;
 		}
 		.personal img{
-			width: 100px;
+			width: 150px;
+			border: 5px solid #fff;
 		}
 	}
 

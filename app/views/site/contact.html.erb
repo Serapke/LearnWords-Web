@@ -11,45 +11,38 @@
 		</p>
 		<div class="contact_details">
 			<div class="container">
-			<div class="detail">
-				<img src="/assets/phone.png"/><p>+447783008354</p>
-			</div>
-			<div class="detail">
-				<img src="/assets/email.png"/><p>M.Serapinas@gmail.com</p>
-			</div>
-			<div class="detail">
-				<img src="/assets/twitter.png"/><p>@serapke</p>
-			</div>
-			<div class="detail">
-				<img src="/assets/facebook.png"/><p>Facebook.com/M.Serapinas</p>
-			</div>
+				<div class="detail">
+					<img src="/assets/phone.png"/><p>+447783008354</p>
+				</div>
+				<div class="detail">
+					<img src="/assets/email.png"/><p>M.Serapinas@gmail.com</p>
+				</div>
 			</div>
 		</div>
 	</div>
-	<div class="col-md-5 right">
-		<%= form_tag(site_contact_path, remote: true, class: 'response form-horizontal', authenticity_token: true) do %>
+	<div class="col-md-4 right">
+		<%= form_tag(contact_path, class: 'response form-horizontal') do %>
 			<h2 class="contact-title">Send Message</h2>
 			<div class="form-group">
 			  <label class="control-label col-sm-4" for="name">Name</label>
 			  <div class="col-sm-8">
-				<%= text_field_tag 'name', nil, placeholder: 'Įveskite vardą', class: 'form-control', autocomplete: 'on' %>
+				<%= text_field_tag 'name', nil, placeholder: 'Name', class: 'form-control', autocomplete: 'on' %>
 			  </div>
 			</div>
 
 			<div class="form-group">
 			  <label class="control-label col-sm-4" for="email">Email</label>
 			  <div class="col-sm-8">
-				<%= text_field_tag 'email', nil, placeholder: 'Įveskite el.paštą', class: 'form-control', autocomplete: 'on' %>
+				<%= text_field_tag 'email', nil, placeholder: 'Email', class: 'form-control', autocomplete: 'on' %>
 			  </div>
 			</div>
 
 			<div class="form-group">
 			  <label class="control-label col-sm-4" for="comment">Message</label>
 			  <div class="col-sm-8">
-				<%= text_area_tag 'comment', nil, placeholder: 'Jūsų komentaras', class: 'form-control', autocomplete: 'on', rows: '6' %>
+				<%= text_area_tag 'comment', nil, placeholder: 'Your comment', class: 'form-control', autocomplete: 'on', rows: '6' %>
 			  </div>
 			</div>
-			<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
 			<div class="button-holder">
 				<%= submit_tag 'Send', class: 'submit' %>
 			</div>

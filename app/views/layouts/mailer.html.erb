@@ -1,5 +1,12 @@
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
   <body>
-    <%= yield %>
+    <h2>You've got a new mail from, <%= @name %></h2>
+    <h4>The message is:<h4>
+    <p><%= @comment %></p>
+    <p style="font-weight: bold"><%= @email %></p>
   </body>
 </html>

@@ -11,23 +11,17 @@
 		</p>
 		<div class="contact_details">
 			<div class="container">
-			<div class="detail">
-				<img src="/assets/phone.png"/><p>+447783008354</p>
-			</div>
-			<div class="detail">
-				<img src="/assets/email.png"/><p>M.Serapinas@gmail.com</p>
-			</div>
-			<div class="detail">
-				<img src="/assets/twitter.png"/><p>@serapke</p>
-			</div>
-			<div class="detail">
-				<img src="/assets/facebook.png"/><p>Facebook.com/M.Serapinas</p>
-			</div>
+				<div class="detail">
+					<img src="/assets/phone.png"/><p>+447783008354</p>
+				</div>
+				<div class="detail">
+					<img src="/assets/email.png"/><p>M.Serapinas@gmail.com</p>
+				</div>
 			</div>
 		</div>
 	</div>
 	<div class="col-md-5 right">
-		<%= form_tag(site_contact_path, remote: true, class: 'response form-horizontal', authenticity_token: true) do %>
+		<%= form_tag(site_contact_path, class: 'response form-horizontal', authenticity_token: true) do %>
 			<h2 class="contact-title">Send Message</h2>
 			<div>
 				<p>Thank you! We will contact you soon.</p>
