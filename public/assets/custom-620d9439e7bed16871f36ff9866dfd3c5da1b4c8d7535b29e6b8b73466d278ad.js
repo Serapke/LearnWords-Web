@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".always-show").mouseover(function(){var a="#d"+$(this).attr("id");$(a).show()}),$(".always-show").mouseout(function(){var a="#d"+$(this).attr("id");$(a).hide()}),-1!=navigator.appVersion.indexOf("Win")&&$("#download_mac").hide(),-1!=navigator.appVersion.indexOf("Mac")&&$("#download_win").hide()});
