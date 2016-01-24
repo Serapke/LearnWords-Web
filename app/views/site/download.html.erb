@@ -16,8 +16,8 @@
 					</ul>
 				</div>
 				<div class="downloadButtons">
-					<%= link_to "Download | Windows 7", download_app_win_path %>
-					<%= link_to "Download | Mac OS X", download_app_mac_path %>
+					<%= link_to "Download | Windows 7", download_app_win_path, id: "download_win" %>
+					<%= link_to "Download | Mac OS X", download_app_mac_path, id: "download_mac" %>
 				</div>
 				<div class="downloadedTimes">
 					<p>Learnwords downloaded <%= @stat.downloads %> times!</p>
