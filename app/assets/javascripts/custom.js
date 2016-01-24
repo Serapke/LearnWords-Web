@@ -7,5 +7,4 @@ $(document).ready(function(){
 		var theId = "#d" + $(this).attr('id');
         $(theId).hide();
     });
-    $(".query").click(function(){
 });

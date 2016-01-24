@@ -5,6 +5,7 @@
  */
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -4422,6 +4423,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 
 .navbar-links {
 	margin-left: 40px;
+}
+.navbar-links > li > a > img {
 }
 .navbar-links > li > a {
 	transition: background 1s;

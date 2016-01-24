@@ -166,7 +166,6 @@ li.error {
 .jumbotron:hover {
 	opacity: 1;
 }
-
 .jumbotron h1 {
 	padding: 40px 0 0 0;
 	color: #303030;
@@ -188,7 +187,7 @@ li.error {
 .header .center {
 	text-align: center;
 }
-.header a{
+.header a {
 	display: block;
 	background: #e5e5e5;
 	border: 3px solid #2980b9;
@@ -215,12 +214,6 @@ li.error {
 }
 
 	@media (max-width: 797px) {
-		.navbar-header{
-
-		}
-		.navbar .logo {
-
-		}
 		body {
 			padding-top: 70px;
 		}
@@ -235,13 +228,11 @@ li.error {
 	border-top: 1px solid #e5e5e5;
 	text-align: center;
 }
-
 .footer .info {
 	padding: 50px;
 	background: #fff;
 	color: #555;
 }
-
 .footer h3 {
 	text-align: center;
 	margin: 15px 0;
@@ -249,18 +240,15 @@ li.error {
 	font-weight: bold;
 	font-family: 'Shift', sans-serif;
 }
-
 .info p {
 	font-size: 12px;
 	text-align: center;
 	color: #000;
 	padding-bottom: 5px;
 }
-
 .footer ul {
 	text-align: center;
 }
-
 .footer  ul li a {
 	color: #555;
 	line-height: 30px;
@@ -269,7 +257,6 @@ li.error {
 	text-align: center;
 	transition: 1s all ease-in-out;
 }
-
 .footer div ul li a:hover {
 	color: #2980b9;
 }
@@ -286,7 +273,6 @@ li.error {
 	border: 1px solid #808080;
 	color: #2980b9;
 }
-
 .footer .rights {
 	background: #e5e5e5;
 	line-height: 50px;
@@ -428,7 +414,6 @@ li.error {
 		.box  {
 			padding: 20px 5px;
 			text-align: center;
-
 		}
 		.box img {
 			margin-bottom: 5px;
@@ -444,7 +429,6 @@ li.error {
 			width: 57%;
 		}
 	}
-
 /******************************** DOWNLOAD **********************************/
 .download {
 	width: 100%;
@@ -507,17 +491,12 @@ li.error {
 	font-weight: 300;
 	color: #404040;
 }
-	@media (min-width: 767px) {
-		.download .left > img {
 
-		}
-	}
 	@media (max-width: 1000px) {
 		.download .left > img {
 			display: none;
 		}
 	}
-
 /******************************** CONTACT **********************************/
 .contact-content  {
 	background: url('/assets/contact.jpg') #c5c5c5 no-repeat left top;
@@ -672,7 +651,6 @@ label {
 			margin: 0;
 		}
 	}
-
 /******************************** D.U.K **********************************/
 .duk_page {
 	padding: 50px;
@@ -764,7 +742,6 @@ label {
 			font-size: 14px;
 		}
 	}
-
 /******************************** Musu komanda **********************************/
 .team {
 	background: url('/assets/team.jpg') #ecf0f1;
@@ -844,8 +821,6 @@ label {
 		}
 	}
 /******************************** Admin panelė **********************************/
-
-
 .admin_panel {
 	background: url('programming.jpg') no-repeat center center;
 	width: 100%;
@@ -1006,7 +981,7 @@ label {
 			width: 80%;
 			margin-top: 10px;
 		}
-		.personal img{
+		.personal img {
 			width: 150px;
 			border: 5px solid #fff;
 		}

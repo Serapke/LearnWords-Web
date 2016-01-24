@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".always-show").mouseover(function(){var o="#d"+$(this).attr("id");$(o).show()}),$(".always-show").mouseout(function(){var o="#d"+$(this).attr("id");$(o).hide()})});
