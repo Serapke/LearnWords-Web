@@ -87,6 +87,5 @@ config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
     password:             ENV["EMAIL_PASSWORD"],
     authentication:       'plain',
     enable_starttls_auto: true  }
-  end
 
 end
