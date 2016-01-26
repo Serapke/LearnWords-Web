@@ -39,7 +39,7 @@ body {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 16px;
 	width: 100%;
-	padding-top: 110px;
+
 	height: 100%;
 }
 ol, ul {
@@ -107,11 +107,13 @@ li.error {
 }
 .quote {
 	background: #fcfcfc;
-    border-left: 10px solid #2980b9;
-    margin: 0.7em 10px;
-    padding: 0.6em 10px;
-    quotes: "\201C""\201D""\2018""\2019";
+	border-left: 10px solid #2980b9;
+	margin: 0.7em 10px;
+	padding: 0.6em 10px;
+	quotes: "\201C""\201D""\2018""\2019";
 	box-shadow: 2px 2px 2px #888;
+	font-size: 100% !important;
+	font-weight: normal !important;
 }
 .quote:before {
 	color: #2980b9;
@@ -125,7 +127,6 @@ li.error {
 .navbar {
 	background: #2980b9;
 	border-bottom: 1px #f5f5f5 solid;
-	padding-left: 20px;
 	width: 100%;
 }
 .navbar-links > li > a{
@@ -143,11 +144,8 @@ li.error {
 	height: 68px;
 	background: url('/assets/temp-logo1.png') no-repeat;
 	display: block;
-	margin-bottom: 20px;
-	margin-top: 20px;
-	border-left: 2px solid #fff;
-	border-right: 2px solid #fff;
-	border-top: 2px solid #fff;
+	margin: 20px 0 20px 20px;
+	border: 2px solid #fff;
 	border-bottom: 4px solid #fff;
 	transition: ease all 1s;
 }
@@ -155,19 +153,17 @@ li.error {
 	border-bottom: 10px solid #fff;
 }
 
-.jumbotron {
+.header {
 	background: url('/assets/test.jpg') #000 no-repeat scroll left top;
 	background-size: cover;
-	height: 520px;
 	width: auto;
 	opacity: 0.9;
 	transition: ease all 1s;
 }
-.jumbotron:hover {
+.header:hover {
 	opacity: 0.95;
 }
-.jumbotron h1 {
-	padding: 40px 0 0 0;
+.header h1 {
 	color: #303030;
 	text-align: center;
 	color: #fff;
@@ -175,17 +171,13 @@ li.error {
 	font-family: 'Shift', sans-serif;
 	font-weight: bold;
 }
-.jumbotron h2 {
+.header h2 {
 	font-family: 'Open Sans', sans-serif;
-	padding: 40px 0 0 0;
-	margin-bottom: 20px;
+	padding: 20px 0 0 0;
 	font-weight: 400;
 	text-align: center;
 	font-size: 20px;
 	color: #fff;
-}
-.header .center {
-	text-align: center;
 }
 .header a {
 	display: block;
@@ -207,21 +199,12 @@ li.error {
 	text-decoration: none;
 }
 .present {
-	padding: 20px;
+	padding: 30px;
 	text-align: center;
 	text-shadow: 1px 1px #000;
 	color: #eee;
 	line-height: 26px;
 }
-
-	@media (max-width: 797px) {
-		body {
-			padding-top: 70px;
-		}
-		.jumbotron {
-			height: 620px;
-		}
-	}
 /*************** Footer ***************/
 .footer {
 	width: 100%;
@@ -287,7 +270,7 @@ li.error {
 		.footer ul li {
 			padding: 8px 0;
 		}
-		.col-md-4 {
+		.footer .col-md-4 {
 			border-bottom: 1px solid #aaa;
 			padding-bottom: 5px;
 		}
@@ -306,13 +289,8 @@ li.error {
 /******************************** GALIMYBES **********************************/
 .benefits {
 	width: 100%;
-	position: relative;
 	background: url('/assets/features_background.jpg') center right;
-	text-align: center;
-	display: flex;
-	padding-top: 90px;
-	flex-wrap: wrap;
-	justify-content: space-around;
+	min-height: 520px;
 }
 .box {
 	border: 1px solid #555;
@@ -351,7 +329,7 @@ li.error {
 	font-family: sans-serif;
 	color: #555;
 	padding: 15px;
-	height: 180px;
+	height: 190px;
 	display: none;
 }
 .features {
@@ -373,10 +351,14 @@ li.error {
 	border: 3px solid #fff;
 	margin-left: 3%;
 }
+.float_right > h2 {
+	color: #f5f5f5;
+}
 .float_left > img {
 	border: 3px solid #504759;
 	margin-right: 3%;
 }
+
 .float_right > h2 {
 	color: #f5f5f5;
 }
@@ -396,7 +378,7 @@ li.error {
 		}
 		.box {
 			margin: 0 auto;
-			max-width: 400px;
+			max-width: 250px;
 		}
 		.box p {
 			height: 100px;
@@ -422,12 +404,16 @@ li.error {
 		.col-md-2 {
 			width: auto;
 		}
+		.float_left > img {
+			margin-right: 7%;
+		}
 		.feature img {
 			width: 40%;
 		}
 		.feature h2 {
 			margin-top: 5%;
-			width: 57%;
+			width: 50%;
+			font-size: 1.1em;
 		}
 	}
 /******************************** DOWNLOAD **********************************/
@@ -435,12 +421,12 @@ li.error {
 	width: 100%;
 	color: #fff;
 	background: url('/assets/download_background.jpg') #000 left top;
-	padding: 50px;
+
 }
 .download .title {
-	padding: 10px 0 40px 0;
+	padding-bottom: 40px;
 	text-align: center;
-	font-size: 46px;
+	font-size: 44px;
 	font-family: 'Shift', sans-serif;
 	font-weight: bold;
 }
@@ -493,19 +479,21 @@ li.error {
 	color: #404040;
 }
 
-	@media (max-width: 1000px) {
-		.download .left > img {
+	@media screen and (max-width: 1000px) {
+		.download .left.hidden-xs {
 			display: none;
+		}
+	}
+	@media screen and (min-width: 768px) and (max-width: 1000px) {
+		.download {
+			padding: 30px;
 		}
 	}
 /******************************** CONTACT **********************************/
 .contact-content  {
 	background: url('/assets/contact.jpg') #c5c5c5 no-repeat left top;
 	width: 100%;
-	margin: 0 auto;
-	padding: 50px;
 }
-
 .get_in_touch {
 	color: #fff;
 }
@@ -518,11 +506,10 @@ li.error {
 	font-weight: 200;
 	font-size: 18px;
 	width: 80%;
-	margin-top: 5px;
 	color: #d5d5d5;
 }
 .contact_details {
-	margin-top: 10px;
+	margin: 10px 0;
 }
 .detail {
 	width: 100%;
@@ -540,13 +527,10 @@ li.error {
 	color: #fff;
 	letter-spacing: 1px;
 }
-
 .response {
-	opacity: 0.9;
 	background: #fff;
 	padding: 30px;
 	box-shadow: 2px 2px 2px #888888;
-	border: 1px solid #f5f5f5;
 }
 .response .contact-title {
 	padding: 0;
@@ -574,7 +558,6 @@ label {
 	margin-bottom: 16px;
 }
 .contact-content textarea {
-	height: 160px;
 	resize: none;
 }
 .button-holder {
@@ -590,7 +573,6 @@ label {
 	cursor: pointer;
 	font-weight: bold;
 }
-
 .submit:hover {
 	color: #fff;
 	background: #505050;
@@ -598,12 +580,6 @@ label {
 }
 
 	@media (max-width: 767px) {
-		.contact-content {
-			margin-top: 20px;
-		}
-		.contact-content .col-md-5  {
-			width: 100%;
-		}
 		.get_in_touch p {
 			width: 100%;
 			text-align: justify;
@@ -625,31 +601,19 @@ label {
 		}
 		.response {
 			margin-top: 20px;
-			padding: 20px;
-			width: 90%;
-			margin-left: auto;
-			margin-right: auto;
-		}
-		label {
-			float: left;
-		}
-		.input, textarea {
-			width: 60%;
-			margin-bottom: 16px;
-			float: left;
-		}
-		textarea {
-			height: 80px;
-			resize: none;
 		}
 		.response .contact-title {
 			margin-bottom: 15px;
-			padding-bottom: 4px;
 			font-size: 1.2em;
 		}
 		.submit {
 			text-align: center;
 			margin: 0;
+		}
+	}
+	@media screen and (min-width: 768px) and (max-width: 1000px) {
+		.contact-content {
+			padding: 30px;
 		}
 	}
 /******************************** D.U.K **********************************/
@@ -748,7 +712,6 @@ label {
 	background: url('/assets/team.jpg') #ecf0f1;
 	width: 100%;
 	padding: 50px;
-	margin: 0;
 }
 .team h1 {
 	font-weight: bold;
@@ -802,12 +765,9 @@ label {
 	color: #2980b9;
 }
 
-
 	@media (max-width: 767px) {
-		.team {
-		}
 		.team .team_member {
-			min-height: 310px;
+			min-height: 320px;
 			height: 250px;
 			background: #fff;
 		}
@@ -815,10 +775,10 @@ label {
 			border: #2980b9 1px solid;
 		}
 	}
-	@media screen and (min-width: 590px) and (max-width: 650px) {
+	@media screen and (min-width: 767px) and (max-width: 900px) {
 		.team_member {
-			margin-left: 5px;
-			margin-right: 5px;
+			margin-left: 30px;
+			width: 280px !important;
 		}
 	}
 /******************************** Admin panelė **********************************/
