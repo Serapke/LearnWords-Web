@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>LearnWords</title>
+  <title><%= yield(:title) %></title>
   <%= javascript_include_tag 'application' %>
 
 
@@ -13,6 +13,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="<%= yield(:meta) %>">
   <%= favicon_link_tag 'favicon.png' %>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -41,7 +42,7 @@
 			<img src="/assets/menu.png" />
 		  </button>
 		  <!-- <a class="navbar-brand logo" href="site_home_path"></a> -->
-		  <%= link_to "", site_home_path,  { class: "navbar-brand logo" } %>
+		  <%= link_to "", site_learnyourwords_path,  { class: "navbar-brand logo" } %>
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->

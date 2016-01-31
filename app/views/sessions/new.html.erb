@@ -1,5 +1,6 @@
 <% if current_admin %>
-	<div class="admin_panel">
+	<% content_for :title, "LearnWords - Admin Panel" %>
+	<div class="admin_panel jumbotron">
 		<div class="container">
 			<h1>Admin Panel</h1>
 			<div class="team_members_list col-md-4">
@@ -31,7 +32,8 @@
 		</div>
 	</div>
 <% else %>
-	<div class="admin_panel">
+	<% content_for :title, "LearnWords - Admin Login" %>
+	<div class="admin_panel jumbotron">
 		<%= form_for(:session, url: admin_login_path) do |f| %>
 			<%= f.text_field :username, placeholder: "Username" %>
 			<%= f.password_field :password, placeholder: "Password" %>

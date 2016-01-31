@@ -784,10 +784,6 @@ label {
 /******************************** Admin panelė **********************************/
 .admin_panel {
 	background: url('programming.jpg') no-repeat center center;
-	width: 100%;
-	padding-top: 30px;
-	padding-bottom: 30px;
-	margin: 0;
 	text-align: center;
 }
 .admin_panel h1{
@@ -947,7 +943,19 @@ label {
 			border: 5px solid #fff;
 		}
 	}
-
+/***************************** Blog *******************************************/
+.blog {
+	background: url('in_progress.jpg') center center;
+	height: 500px;
+	opacity: 0.7;
+}
+.blog h1 {
+	color: #EE0000;
+	font-weight: 600;
+	font-size: 40px;
+	margin-top: 100px;
+	text-align: center;
+}
 
 .no-left-border {
 	border-left: 0;

@@ -24,6 +24,9 @@ class SiteController < ApplicationController
   def contact
   end
 
+  def blog
+  end
+
   def contact_send_email
   	@name = params[:name]
   	@email = params[:email]

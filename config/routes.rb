@@ -4,12 +4,13 @@ Rails.application.routes.draw do
   resources :duk
   resources :admins
 
-  get 'site/home', :path => 'index'
+  get 'site/learnyourwords', :path => 'index'
   get 'site/benefits', :path => 'benefits'
   get 'site/download', :path => 'download'
   get 'site/download_app_win' => 'site#download_app_win', as: :download_app_win
   get 'site/download_app_mac' => 'site#download_app_mac', as: :download_app_mac
   get 'site/contact', :path => 'contact'
+  get 'site/blog', :path => 'blog'
   post '/contact' => 'site#contact_send_email'
 
   get 'admin' => 'sessions#new', as: :admin_login	#sign in,
