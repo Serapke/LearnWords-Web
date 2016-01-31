@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   get 'duks' => 'duk#new'
   post 'duks' => 'duk#create'
 
-  root to: 'site#home'
+  root to: 'site#learnyourwords'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
