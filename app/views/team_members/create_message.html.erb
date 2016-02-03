@@ -1,0 +1,17 @@
+<% if current_admin %>
+	<div class="admin_panel jumbotron">
+		<div class="container">
+			<h1>Send Message</h1>
+			<%= link_to 'Back', admin_login_path, class: "admin_button go_back" %>
+			<%= form_tag(create_message_path) do %>
+					<label class="control-label" for="comment">Message</label>
+					<%= text_area_tag 'message', nil, placeholder: 'Your message', class: 'form-control', autocomplete: 'on', rows: '8' %>
+				<div class="button-holder">
+					<%= submit_tag 'Send', class: 'submit' %>
+				</div>
+			<% end %>
+		</div>
+	</div>
+<% else %>
+	<% require_admin %>
+<% end %>

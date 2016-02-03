@@ -6,7 +6,7 @@ class ContactMailer < ApplicationMailer
     @name = name
     @email  = email
 		@comment = comment
-    mail(to: "M.Serapinas@gmail.com", subject: 'LearnWords Contact Query',
+    mail(to: "M.Serapinas@gmail.com", subject: 'LearnWords - Contact Query',
          template_path: 'layouts',
          template_name: 'mailer')
   end

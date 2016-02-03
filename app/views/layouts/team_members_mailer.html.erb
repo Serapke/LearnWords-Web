@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h2>You've got a new mail from Admin, <%= @admin.name %></h2>
+    <h4>The message is:<h4>
+    <p><%= simple_format(@message) %></p>
+    <p style="font-weight: bold"><%= @admin.email %></p>
+  </body>
+</html>

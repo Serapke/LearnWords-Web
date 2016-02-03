@@ -31,7 +31,7 @@ class SiteController < ApplicationController
   	@name = params[:name]
   	@email = params[:email]
   	@comment = params[:comment]
-  	ContactMailer.send_message(@name, @email, @comment).deliver
+  	ContactMailer.send_message(@name, @email, @comment).deliver_now
   end
 
   private

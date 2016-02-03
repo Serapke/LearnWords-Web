@@ -7,4 +7,7 @@ class TeamMember < ActiveRecord::Base
 			  presence: true
 	validates :quote,
 			  presence: true
+  validates :email,
+        presence: true,
+        uniqueness: true
 end

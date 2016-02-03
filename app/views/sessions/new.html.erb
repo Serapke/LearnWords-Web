@@ -13,12 +13,13 @@
 				<%= link_to 'Add New Member', new_team_member_path, method: "get", class: "admin_button" %>
 			</div>
 			<div class="col-md-4 website-settings">
-				<h3>Svetainės nustatymai</h3>
+				<h3>Actions</h3>
 				<%= link_to "Add New Admin", admin_signup_path, class: "admin_button" %>
 				<%= link_to "Add New FAQ", new_duk_path, class: "admin_button" %>
+				<%= link_to "Email Team Members", create_message_path , class: "admin_button" %>
 			</div>
 			<div class="personal col-md-4">
-				<h3>Paskyra</h3>
+				<h3>Profile</h3>
 				<% if current_admin.image != "" %>
 					<%= image_tag(current_admin.image) %>
 				<% else %>

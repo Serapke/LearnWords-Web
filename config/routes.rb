@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+
+  get '/create_message' => 'team_members#create_message'
+  post '/create_message' => 'team_members#send_message'
   resources :team_members
   resources :duk
   resources :admins
@@ -9,8 +12,8 @@ Rails.application.routes.draw do
   get 'site/download', :path => 'download'
   get 'site/download_app_win' => 'site#download_app_win', as: :download_app_win
   get 'site/download_app_mac' => 'site#download_app_mac', as: :download_app_mac
-  get 'site/contact', :path => 'contact'
   get 'site/blog', :path => 'blog'
+  get 'site/contact', :path => 'contact'
   post '/contact' => 'site#contact_send_email'
 
   get 'admin' => 'sessions#new', as: :admin_login	#sign in,

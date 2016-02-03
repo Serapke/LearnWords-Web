@@ -1,9 +1,13 @@
 <% if current_admin %>
 	<div class="admin_panel jumbotron">
 		<div class="container">
-			<h1>Update Team Member</h1>
+			<h1>Message sent</h1>
 			<%= link_to 'Back', @team_member, class: "admin_button go_back" %>
-			<%= render 'form' %>
+			<%= form_tag(create_message_path) do %>
+				<div>
+					<p class="message_sent">Thank you! We will contact you soon.</p>
+				</div>
+			<% end %>
 		</div>
 	</div>
 <% else %>

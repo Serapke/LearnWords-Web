@@ -913,6 +913,10 @@ label {
 .admin_panel .buttons {
 	width: 100%;
 }
+.admin_panel .message_sent {
+	color: #000;
+	margin: 0;
+}
 	@media (max-width: 767px) {
 		.admin_panel {
 			padding-top: 50px;
@@ -941,6 +945,10 @@ label {
 		.personal img {
 			width: 150px;
 			border: 5px solid #fff;
+		}
+		.admin_panel .go_back {
+			margin-top: 20px;
+			margin-left: -15px;
 		}
 	}
 /***************************** Blog *******************************************/

@@ -61,6 +61,16 @@ class TeamMembersController < ApplicationController
     end
   end
 
+  def create_message
+  end
+
+  def send_message
+    @team_members = TeamMember.all
+    @admin = Admin.find(session[:admin_id])
+  	@message = params[:message]
+  	TeamMembersMailer.send_message(@admin, @team_members, @message).deliver_now
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_team_member
@@ -69,6 +79,6 @@ class TeamMembersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def team_member_params
-      params.require(:team_member).permit(:name, :job_title, :phone, :location, :image, :quote)
+      params.require(:team_member).permit(:name, :job_title, :email, :phone, :location, :image, :quote)
     end
 end
