@@ -1,11 +1,12 @@
 $(document).ready(function(){
-    $(".always-show").mouseover(function(){
-		var theId = "#d" + $(this).attr('id');
-        $(theId).show();
-    });
-    $(".always-show").mouseout(function(){
-		var theId = "#d" + $(this).attr('id');
-        $(theId).hide();
+    $('.box .benefit').hide();
+    $('.box .always-show').hover(function(e){
+        e.preventDefault();
+        // hide all span
+        var $this = $(this).parent().find('.benefit');
+        $(".box .benefit").not($this).slideUp();
+        // here is what I want to do
+        $this.slideToggle('slow');
     });
     if (navigator.appVersion.indexOf("Win")!=-1) $("#download_mac").hide();
     if (navigator.appVersion.indexOf("Mac")!=-1) $("#download_win").hide();
@@ -19,7 +20,6 @@ $(document).ready(function(){
           $(".duk .answer").not($this).slideUp();
           // here is what I want to do
           $this.slideToggle('slow');
-
       });
     }
 });
