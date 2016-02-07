@@ -551,7 +551,7 @@ label {
 	width: 110px;
 	text-align: left;
 }
-.input, textarea {
+.response .input, .response textarea {
 	border: 1px #333 solid;
 	padding: 5px;
 	width: 280px;
@@ -649,10 +649,6 @@ label {
 	background: #fff;
 	opacity: 1;
 	border-left: 8px #2980b9 solid;
-	-ms-transform: scale(1.1,1.1); /* IE 9 */
-    -webkit-transform: scale(1.1,1.1); /* Safari */
-    transform: scale(1.1,1.1); /* Standard syntax */
-		z-index: 1;
 }
 
 .duk_buttons {
@@ -662,11 +658,6 @@ label {
 }
 .duk_buttons > img {
 	width: 20px;
-}
-.duk_buttons:hover > img {
-	-webkit-animation:spin 0.5s linear;
-    -moz-animation:spin 0.5s linear;
-    animation:spin 0.5s linear;
 }
 .duk .query {
 	border-bottom: 2px solid #2980b9;
@@ -697,11 +688,15 @@ label {
 
 	@media (max-width: 767px) {
 		.duk_page {
-			padding: 50px 10px 0;
+			padding: 50px 0px 0;
 			background: #e5e5e5;
+		}
+		.duk {
+			min-height: 0;
 		}
 		.duk .query {
 			font-size: 16px;
+			cursor: pointer;
 		}
 		.duk .answer {
 			font-size: 14px;
@@ -949,6 +944,12 @@ label {
 		.admin_panel .go_back {
 			margin-top: 20px;
 			margin-left: -15px;
+		}
+		.admin_panel .quote {
+			width: auto;
+		}
+		#duk_query, #duk_answer {
+			width: 80%;
 		}
 	}
 /***************************** Blog *******************************************/
