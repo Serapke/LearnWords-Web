@@ -205,6 +205,11 @@ li.error {
 	color: #eee;
 	line-height: 26px;
 }
+	@media (max-width: 767px) {
+		.header {
+			padding-top: 50px;
+		}
+	}
 /*************** Footer ***************/
 .footer {
 	width: 100%;
@@ -583,6 +588,7 @@ label {
 	@media (max-width: 767px) {
 		.get_in_touch p {
 			width: 100%;
+			color: #fff;
 			text-align: justify;
 		}
 		.contact_details img{
@@ -691,14 +697,22 @@ label {
 	@media (max-width: 767px) {
 		.duk_page {
 			padding: 50px 0px 0;
-			background: #e5e5e5;
 		}
 		.duk {
 			min-height: 0;
+			border-bottom: 1px solid #aaa;
+			box-shadow: 2px 2px #aaa;
+		}
+		.duk:hover {
 		}
 		.duk .query {
 			font-size: 16px;
 			cursor: pointer;
+			border-bottom: 0;
+			color: #333;
+		}
+		.duk .query:hover {
+			border-bottom: 2px solid #2980b9;
 		}
 		.duk .answer {
 			font-size: 14px;
@@ -763,6 +777,9 @@ label {
 }
 
 	@media (max-width: 767px) {
+		.team {
+			background: url('/assets/team_background.jpg') top center;
+		}
 		.team .team_member {
 			min-height: 320px;
 			height: 250px;
