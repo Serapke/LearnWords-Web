@@ -12,13 +12,13 @@ class SiteController < ApplicationController
   def download_app_win
     count = @stat.downloads+1
     @stat.update_attributes(downloads: count)
-	   send_file Rails.root.join('app/assets/downloads', 'Setup.exe'), type: "application/exe"
+	   send_file Rails.root.join('/app/assets/downloads', 'Setup.exe'), type: "application/exe"
   end
 
   def download_app_mac
     count = @stat.downloads+1
     @stat.update_attributes(downloads: count)
-    send_file Rails.root.join('app/assets/downloads', 'WordsApp.dmg'), type: "application/dmg"
+    send_file Rails.root.join('app', 'assets', 'downloads', 'LearnWords.dmg'), type: "application/dmg"
   end
 
   def contact
