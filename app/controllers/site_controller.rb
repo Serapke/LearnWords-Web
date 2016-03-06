@@ -12,7 +12,7 @@ class SiteController < ApplicationController
   def download_app_win
     count = @stat.downloads+1
     @stat.update_attributes(downloads: count)
-	   send_file Rails.root.join('/app/assets/downloads', 'LearnWords.zip')
+	   send_file Rails.root.join('app', 'assets', 'downloads', 'LearnWords.zip')
   end
 
   def download_app_mac
