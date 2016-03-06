@@ -13,9 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20160202223858) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "admins", force: :cascade do |t|
     t.string   "username"
     t.string   "email"
