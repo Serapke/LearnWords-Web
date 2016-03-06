@@ -57,6 +57,6 @@ class DukController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def duk_params
-      params.require(:duk).permit(:query, :answer)
+      params.require(:duk).permit(:query, :answer, :link)
     end
 end

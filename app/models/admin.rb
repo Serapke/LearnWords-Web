@@ -1,6 +1,6 @@
 class Admin < ActiveRecord::Base
   has_secure_password
 
-  validates :name,
+  validates :username,
           presence: true
 end

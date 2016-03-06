@@ -17,6 +17,10 @@
     <%= f.label :answer %>
     <%= f.text_area(:answer, size: "35x7", maxlength: 600) %>
   </div>
+  <div class="field">
+    <%= f.label :answer %>
+    <%= f.text_field(:link, size: "35x7", maxlength: 600) %>
+  </div>
   <div class="actions">
     <%= f.submit "Submit", class: "submit" %>
   </div>

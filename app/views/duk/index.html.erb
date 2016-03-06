@@ -12,7 +12,12 @@ common ones." %>
 						<%= link_to image_tag("edit_duk"), edit_duk_path(duk), class: "duk_buttons" %>
 					<% end %>
 					<h3 class="query"><%= duk.query %></h3>
-					<h6 class="answer"><%= duk.answer %></h6>
+					<div class="answer">
+						<h6 class="text-answer"><%= duk.answer %></h6>
+						<% if duk.link != nil && duk.link != "" %>
+							<a class="link" target="_blank" href="<%= duk.link %>">Link</a>
+						<% end %>
+					</div>
 				</div>
 			<% end %>
 		</div>
